@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+body {
+    background-image: url(images/stop.jpg);
+    background-size: cover;
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'A A A A '
+    'B B B B '
+    'C D D D '
+    'C D D D '
+    'C E E E ';
+    grid-gap: 5px;
+    margin: unset;
+}
+header{
+    grid-area: A;
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;   /* 4 parámetros (x / y) */
+    border: 1px solid coral;
+}
+
+nav{  
+    width: fit-content;
+    margin: auto;
+    grid-area: B; 
+    background-color: black;
+    text-align: center;
+    color: black; 
+    font-size: 15px ;  
+    height: auto;          
+}
+
+aside{
+    grid-area: C;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 25px;              /* 1 parámetro */
+    height: auto;
+    flex-direction: column;
+    flex: 70%;
+}
+section{
+    grid-area: D;
+    height: auto;
+    max-width:auto;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid black;   
+}
+footer{
+    grid-area: E;
+    color: blanchedalmond;
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 25px;              /* 1 parámetro */
+
+}
+
+.menu-h{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-h > li > a {
+    display: flexbox;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-h > li:hover{
+    background-color: red;
+}
+
+.menu-a{
+    list-style: none;
+    display: flexbox;
+    justify-content: left;
+}
+.menu-v {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.menu-h li:hover .menu-v {
+    display: block;
+}
+
+.menu-a li:hover .menu-v {
+    display: block;
+}
+
+.menu-v li:hover{
+    background-color: black;
+}
+.menu-v li a{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+}
+
+
+@media screen and (max-width: 700px){
+    nav, aside{
+        flex-direction: column;
+    }
+
+}
